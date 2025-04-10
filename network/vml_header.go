@@ -7,7 +7,7 @@ import (
 	"io"
 	"math"
 
-	"github.com/franizus/iso8583/encoding"
+	"github.com/MegalLink/iso8583/encoding"
 )
 
 const (

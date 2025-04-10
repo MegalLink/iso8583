@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/franizus/iso8583"
+	"github.com/MegalLink/iso8583"
 )
 
 var (

@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/franizus/iso8583/field"
+	"github.com/MegalLink/iso8583/field"
 )
 
 const (

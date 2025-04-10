@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/franizus/iso8583/padding"
+	"github.com/MegalLink/iso8583/padding"
 )
 
 var _ Field = (*Composite)(nil)
@@ -94,13 +94,12 @@ func (f *Composite) SetSpec(spec *Spec) {
 //
 // A valid input is as follows:
 //
-//      type CompositeData struct {
-//          F1 *String
-//          F2 *String
-//          F3 *Numeric
-//          F4 *SubfieldCompositeData
-//      }
-//
+//	type CompositeData struct {
+//	    F1 *String
+//	    F2 *String
+//	    F3 *Numeric
+//	    F4 *SubfieldCompositeData
+//	}
 func (f *Composite) SetData(data interface{}) error {
 	dataStruct := reflect.ValueOf(data)
 	if dataStruct.Kind() == reflect.Ptr || dataStruct.Kind() == reflect.Interface {

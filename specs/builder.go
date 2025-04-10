@@ -8,11 +8,11 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/franizus/iso8583"
-	"github.com/franizus/iso8583/encoding"
-	"github.com/franizus/iso8583/field"
-	"github.com/franizus/iso8583/padding"
-	"github.com/franizus/iso8583/prefix"
+	"github.com/MegalLink/iso8583"
+	"github.com/MegalLink/iso8583/encoding"
+	"github.com/MegalLink/iso8583/field"
+	"github.com/MegalLink/iso8583/padding"
+	"github.com/MegalLink/iso8583/prefix"
 )
 
 type fieldConstructorFunc func(spec *field.Spec) field.Field

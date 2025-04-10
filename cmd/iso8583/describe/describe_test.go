@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/franizus/iso8583"
-	"github.com/franizus/iso8583/specs"
+	"github.com/MegalLink/iso8583"
+	"github.com/MegalLink/iso8583/specs"
 	"github.com/stretchr/testify/require"
 )
 

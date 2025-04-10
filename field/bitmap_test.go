@@ -3,8 +3,8 @@ package field
 import (
 	"testing"
 
-	"github.com/franizus/iso8583/encoding"
-	"github.com/franizus/iso8583/prefix"
+	"github.com/MegalLink/iso8583/encoding"
+	"github.com/MegalLink/iso8583/prefix"
 	"github.com/stretchr/testify/require"
 )
 

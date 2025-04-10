@@ -1,11 +1,11 @@
 package specs
 
 import (
-	"github.com/franizus/iso8583"
-	"github.com/franizus/iso8583/encoding"
-	"github.com/franizus/iso8583/field"
-	"github.com/franizus/iso8583/padding"
-	"github.com/franizus/iso8583/prefix"
+	"github.com/MegalLink/iso8583"
+	"github.com/MegalLink/iso8583/encoding"
+	"github.com/MegalLink/iso8583/field"
+	"github.com/MegalLink/iso8583/padding"
+	"github.com/MegalLink/iso8583/prefix"
 )
 
 // we keep it for compatibility reasons
