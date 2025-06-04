@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/MegalLink/iso8583/encoding"
-	"github.com/franizus/go-util/bcd"
+	"github.com/MegalLink/iso8583/utils/bcd"
 )
 
 type bcdVarPrefixer struct {
