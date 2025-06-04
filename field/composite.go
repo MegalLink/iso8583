@@ -451,7 +451,7 @@ func (f *Composite) setPackableDataFields() ([]int, error) {
 
 		// These fields are set using the untyped API
 		_, ok := f.fieldsMap[id]
-		// We don't wish set the MTI again, hence we ignore the 0
+		// We don't wish set the SetMTI again, hence we ignore the 0
 		// index
 		if (ok || f.data != nil) && id != 0 {
 			populatedFieldIDs = append(populatedFieldIDs, id)

@@ -25,7 +25,7 @@ type Message struct {
 	fieldsMap map[int]struct{}
 }
 
-func NewMessage(spec *MessageSpec) *Message {
+func NewMessage(spec *MessageSpec) MessageInterface {
 	fields := spec.CreateMessageFields()
 
 	return &Message{
@@ -72,7 +72,7 @@ func (m *Message) Bitmap() *field.Bitmap {
 	return m.bitmap
 }
 
-func (m *Message) MTI(val string) {
+func (m *Message) SetMTI(val string) {
 	m.fieldsMap[0] = struct{}{}
 	m.fields[0].SetBytes([]byte(val))
 }

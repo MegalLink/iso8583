@@ -71,7 +71,7 @@ func TestMessage(t *testing.T) {
 
 	t.Run("Test packing and unpacking untyped fields", func(t *testing.T) {
 		message := NewMessage(spec)
-		message.MTI("0100")
+		message.SetMTI("0100")
 		require.NoError(t, message.Field(2, "4242424242424242"))
 		require.NoError(t, message.Field(3, "123456"))
 		require.NoError(t, message.Field(4, "100"))
@@ -431,7 +431,7 @@ func TestPackUnpack(t *testing.T) {
 		})
 		require.NoError(t, err)
 
-		message.MTI("0100")
+		message.SetMTI("0100")
 
 		got, err := message.Pack()
 
@@ -611,7 +611,7 @@ func TestPackUnpack_ThirdBitmap(t *testing.T) {
 
 	t.Run("should pack message successfully", func(t *testing.T) {
 		msg := NewMessage(MessageSpecification)
-		msg.MTI(data.F0)
+		msg.SetMTI(data.F0)
 
 		f55, _ := hex.DecodeString(data.F55)
 		f104, _ := hex.DecodeString(data.F104)
@@ -783,7 +783,7 @@ func TestMessageJSON(t *testing.T) {
 
 	t.Run("Test JSON encoding", func(t *testing.T) {
 		message := NewMessage(spec)
-		message.MTI("0100")
+		message.SetMTI("0100")
 		err := message.SetData(&TestISOData{
 			F2: field.NewStringValue("4242424242424242"),
 			F3: &TestISOF3Data{
@@ -804,7 +804,7 @@ func TestMessageJSON(t *testing.T) {
 
 	t.Run("Test JSON encoding untyped", func(t *testing.T) {
 		message := NewMessage(spec)
-		message.MTI("0100")
+		message.SetMTI("0100")
 		message.Field(2, "4242424242424242")
 		message.Field(4, "100")
 
