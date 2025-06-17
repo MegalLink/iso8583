@@ -459,6 +459,10 @@ func TestPackUnpack(t *testing.T) {
 		require.NoError(t, err)
 		require.Equal(t, "000000", s)
 
+		b, err := message.GetBytes(3)
+		require.NoError(t, err)
+		require.Equal(t, "303030303030", hex.EncodeToString(b))
+
 		s, err = message.GetString(4)
 		require.NoError(t, err)
 		require.Equal(t, "77700", s)
